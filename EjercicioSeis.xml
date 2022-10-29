@@ -1,0 +1,66 @@
+<!--
+
+5) Decir si los siguientes documentos XML están bien formados, y, si no lo están, decir por qué y corregir los errores.  Para  realizar  esta  función  deberíamos  detectar  a  simple  vista  los  errores  y,  una  vez  hecho  esto, introducirlos en un editor XML como XML Copy Editor, que permite comprobar si los documentos están bien formados. Completaremos nuestra primera impresión con los errores adicionales que nos descubra el proceso.
+
+-->
+
+<!-- Primer documento -->
+
+	<!-- Primer Documento original: -->
+
+
+<?xml version="1.0"?>
+<documento>
+	<p>Mi Primer <destacar importancia=1>documentoXML</destacar></p]
+	<p>Comienza con la etiqueta <documento&gt;</p>
+	<p>A continuacion colocamos un elemento sin contenido</p>
+	<imagen fichero="imagen.gif">
+</documento>
+
+	<!-- Errores encontrados: -->
+<!-- En la linea 3 el atributo importancia="1" debe tener comillas y no las tiene -->
+<!-- En la linea 3 la etiqueta parrafo se cierra de forma incorrecta, en vez de un '>' hay un ']' -->
+<!-- En la linea 4 el escape de la etiqueta documento esta mal hecho, en vez de un escape '&lt;' hay un '<' -->
+<!-- En la linea 6 la etiqueta img deberia estar cerrada con una '/' -->
+
+
+	<!-- Primer Documento corregido: -->
+ 
+<?xml version="1.0"?>
+<documento>
+	<p>Mi Primer <destacar importancia="1">documentoXML</destacar></p>
+	<p>Comienza con la etiqueta &lt;documento&gt;</p>
+	<p>A continuacion colocamos un elemento sin contenido</p>
+	<imagen fichero="imagen.gif"/>
+</documento>
+
+
+<!-- Segundo documento -->
+
+	<!-- Segundo Documento original: -->
+
+
+<?xml version="1.0"?>
+<libros>
+	<libro id="quijote">
+	<titulo>El Quijote</titulo>
+	<autor nombre=cervantes nombre=cervantes>
+	<descripcion>Es el m<ejor libro de cervantes.</descripcion></libro]
+</Libros>
+
+	<!-- Errores encontrados: -->
+<!-- En la linea 5 en la etiqueta autor, el atributo nombre esta duplicado, y ademas el valor debe estar entre comillas -->
+<!-- En la linea 6 en la etiqueta descripcion, hay un '<' en la palabra 'mejor', que no deberia estar ahi -->
+<!-- En la linea 6 la etiqueta libro esta cerrada con un ']' en vez de un '>'
+<!-- En la linea 7 la etiqueta de cierre de 'libros' debe estar en minusculas para que concuerde con su etiqueta de apertura. -->
+
+	<!-- Segundo Documento corregido: -->
+
+<?xml version="1.0"?>
+<libros>
+    <libro id="quijote">
+        <titulo>El Quijote</titulo>
+        <autor nombre="cervantes"/>
+        <descripcion>Es el mejor libro de cervantes.</descripcion>
+    </libro>
+</libros>

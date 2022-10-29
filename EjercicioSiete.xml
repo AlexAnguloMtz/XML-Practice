@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<business-invoice>
+    <contact>
+        <name>name</name>
+        <location>
+           <street-address>street address</street-address>    
+           <city>city</city>
+           <state>state</state>
+           <zip-code>zip code</zip-code>
+        </location>
+        <phone>(000)000-0000</phone>
+        <e-mail>e-mail</e-mail>
+        <website>website</website>
+    </contact>
+    <bill-to>
+        <client-name>client name</client-name>
+        <location>
+            <street-address>street address</street-address>
+            <city>city</city>
+            <state>state</state>
+            <zip-code>zip code</zip-code>
+        </location>
+    </bill-to>
+    <ship-to>
+        <client-name>client name</client-name>
+        <location>
+            <street-address>street address</street-address>
+            <city>city</city>
+            <state>state</state>
+            <zip-code>zip code</zip-code>
+        </location>
+    </ship-to>
+    <invoice-details>
+        <invoice-number>#12345</invoice-number>
+        <date>
+            <day>day</day>
+            <month>month</month>
+            <year>year</year>
+        </date>
+        <terms-of-payment>terms of payment</terms-of-payment>
+        <due>
+            <day>day</day>
+            <month>mmonth</month>
+            <year>year</year>
+        </due>
+    </invoice-details>
+    <product-or-service>
+        <name>name</name>
+        <description>description</description>
+        <quantity-or-hours>quantity or hours</quantity-or-hours>
+        <rate>rate</rate>
+        <amount>amount</amount>
+    </product-or-service>
+    <billing>
+        <customer-message>customer message</customer-message>
+        <subtotal>subtotal</subtotal>
+        <sales-tax>sales tax</sales-tax>
+        <shipping>shipping</shipping>
+        <total>total</total>
+    </billing>
+</business-invoice>
